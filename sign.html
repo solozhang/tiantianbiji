@@ -1,0 +1,133 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+<title>天天笔记</title>
+<link rel="stylesheet" href="./css/sign.css">
+<script type="text/javascript">
+function register()
+{
+	document.getElementById("login").setAttribute("style", "display: none;");
+	document.getElementById("signin").setAttribute("class", "");
+	document.getElementById("register").setAttribute("style", "display: block;");
+	document.getElementById("signup").setAttribute("class", "active");
+}
+
+function login()
+{
+	document.getElementById("register").setAttribute("style", "display: none;");
+	document.getElementById("signup").setAttribute("class", "");
+	document.getElementById("login").setAttribute("style", "display: block;");
+	document.getElementById("signin").setAttribute("class", "active");
+}
+
+function check_passwd(field)
+{
+	if(field.value!="")
+	{
+		if(field.value.length < 6){
+			var ele = document.getElementById("passwd_error"); 
+			ele.setAttribute("class", "error show");
+			ele.innerHTML = "密码长度应在6~20之间"
+		}
+	}
+}
+
+function reput_passwd()
+{
+	var ele = document.getElementById("passwd_error"); 
+	ele.setAttribute("class", "");
+	ele.innerHTML = ""
+}
+
+function check_email(field)
+{
+	var value = field.value;
+	if(value!="")
+	{
+		apos=value.indexOf("@");
+		dotpos=value.lastIndexOf(".");
+		if (apos<1||dotpos-apos<2){
+			var ele = document.getElementById("email_error"); 
+			ele.setAttribute("class", "error show");
+			ele.innerHTML = "请输入正确的邮箱格式"
+		}
+	}
+}
+
+function reput_email()
+{
+	var ele = document.getElementById("email_error"); 
+	ele.setAttribute("class", "");
+	ele.innerHTML = ""
+}
+
+</script>
+
+</head>
+<body class="zhi  no-auth" style>
+<div class="index-main">
+<div class="index-main-body">
+<div class="index-header">
+<h1 class="subtitle">天天笔记，记录你的成长</h1>
+</div>
+
+<div class="desk-front sign-flow clearfix sign-flow-simple">
+
+<div class="index-tab-navs">
+<div class="navs-slider" data-active-index="0">
+<a id="signup" onclick="register()" class="active">注册</a>
+<a id="signin" onclick="login()" class="">登录</a>
+</div>
+</div>
+
+
+<div id="login" class="view view-signin" style="display: block;">
+<form novalidate="novalidate">
+<input type="hidden" name="_xsrf" value="a52ac05bf413f647e8c9b0bea4dda237">
+<div class="group-inputs">
+
+<div class="email input-wrapper">
+<input type="text" name="account" aria-label="邮箱" placeholder="邮箱" required="">
+</div>
+<div class="input-wrapper">
+<input type="password" name="password" aria-label="密码" placeholder="密码" required="">
+</div>
+</div>
+<div class="failure" id="summary"><ul></ul></div>
+<div class="button-wrapper command">
+<button class="sign-button submit" type="submit">登录</button>
+</div>
+</form>
+</div>
+<div id="register" class="view view-signup selected" style="display: none;">
+<form class="zu-side-login-box" action="/register/email" id="sign-form-1" autocomplete="off" novalidate="novalidate">
+<input type="password" hidden=""> 
+<input type="hidden" name="_xsrf" value="a52ac05bf413f647e8c9b0bea4dda237">
+<div class="group-inputs">
+
+<div class="name input-wrapper">
+<input required="" type="text" name="fullname" aria-label="用户名" placeholder="用户名">
+</div>
+<div class="email input-wrapper">
+
+<input required="" onblur="check_email(this)" onfocus="reput_email(this)" type="text" class="account" name="phone_num" aria-label="邮箱" placeholder="邮箱">
+<label id="email_error"></label>
+
+</div>
+<div class="input-wrapper">
+<input required="" value="" onblur="check_passwd(this)" onfocus="reput_passwd(this)" type="password" name="password" aria-label="密码" placeholder="密码（不少于 6 位）">
+<label id="passwd_error"></label>
+</div>
+</div>
+<div class="failure" id="summary"><ul></ul></div>
+<div class="button-wrapper command">
+<button class="sign-button submit" type="submit">注册</button>
+</div>
+</form>
+</div>
+</div>
+</div>
+
+</div>
+<div>
+</body></html>
