@@ -40,10 +40,20 @@ display:block;
 .goals div{
 	text-align:center;
 }
-.onbutton{
+.detail{
+	background:#9E7504;
+	outline-width:1px;
+	outline-color:#9E7504;
+}
+.toselect{
 	background:#65D263;
 	outline-width:1px;
 	outline-color:#65D263;
+}
+.todelete{
+	background:#D26D63;
+	outline-width:1px;
+	outline-color:#D26D63;
 }
 .add{
 	background:#A87D05;
@@ -80,19 +90,15 @@ button{
 <div class="goals">
 	<form>
 		<div>
-			<button class="onbutton">心情</button>
+			<button class="detail">O 详情</button>
 		</div>
 		<hr color=#DBDEDA size=1>
 		<div>
-			<button>饮食</button>
+			<button class="toselect">√ 选择</button>
 		</div>
 		<hr color=#DBDEDA size=1>
 		<div>
-			<button>运动</button>
-		</div>
-		<hr color=#DBDEDA size=1>
-		<div>
-			<button class="add">+ 添加新指标</button>
+			<button class="todelete">× 删除</button>
 		</div>
 	</form>
 </div>
