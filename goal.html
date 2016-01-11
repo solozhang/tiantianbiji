@@ -31,25 +31,34 @@ background:#f7fafc;
 	color:white;
 }
 /*----------------------------*/
-.container{
+.goals{
 background:white;
 padding:10px 5 0 5;
 font-family: "Helvetica";
+display:block;
 }
-input[type='checkbox']{
-opacity:0;
+.goals div{
+	text-align:center;
 }
-.select-box{
-height:17px;
-width:17px;
-background:url(image/duicha.jpg);
-background-repeat:no-repeat;
-background-position:-10px -40px;
+.onbutton{
+	background:#65D263;
+	outline-width:1px;
+	outline-color:#A87D05;
 }
-label{
-margin:0 0 0 15px;
-	   line-height:10px;
-color:#555
+.add{
+	background:#A87D05;
+	outline-width:1px;
+	outline-color:#A87D05;
+}
+button{
+	width:230px;
+	height:25px;
+	color:white;
+	border-radius:10px;
+	border:none;
+	background:#919496;
+	outline-width:1px;
+	outline-color:#919496;
 }
 </style>
 </head>
@@ -68,20 +77,22 @@ color:#555
 		<a href="#">注销</a>
 	</div>
 </div>
-<div class="container">
+<div class="goals">
 	<form>
 		<div>
-			<span class="select-box">
-			<input type="checkbox"><label>心情</label>
-			</span>
+			<button class="onbutton">心情</button>
 		</div>
-		<hr color=#5bb8ff size=1>
+		<hr color=#DBDEDA size=1>
 		<div>
-			<input type="checkbox"><label>饮食</label>
+			<button>饮食</button>
 		</div>
-		<hr color=#5bb8ff size=1>
+		<hr color=#DBDEDA size=1>
 		<div>
-			<input type="checkbox"><label>运动</label>
+			<button>运动</button>
+		</div>
+		<hr color=#DBDEDA size=1>
+		<div>
+			<button class="add">+ 添加新指标</button>
 		</div>
 	</form>
 </div>
