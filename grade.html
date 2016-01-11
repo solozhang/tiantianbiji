@@ -1,0 +1,118 @@
+<html>
+<head>
+<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<style type="text/css">
+body{
+width:320px;
+margin:5% auto 0;
+background:#f7fafc;
+}
+#header{
+	line-height:40px;
+	width:320px;
+	height:40px;
+	background:linear-gradient(to bottom,#fb0,#E6AA03);
+}
+#header a{
+	text-decoration:none;
+	color:white;
+}
+.selected{
+	width:80px;
+	float:left;
+	text-align:center;
+	color:white;
+	background:linear-gradient(to bottom,#C18F06,#735503);
+}
+.notselect{
+	width:80px;
+	float:left;
+	text-align:center;
+	color:white;
+}
+/*----------------------------*/
+.goals{
+background:white;
+padding:10px 5 0 5;
+font-family: "Helvetica";
+display:block;
+}
+.goals div{
+	text-align:center;
+}
+.detail{
+	background:#9E7504;
+	outline-width:1px;
+	outline-color:#9E7504;
+}
+.grade{
+	background:#5bb8ff;
+	outline-width:1px;
+	outline-color:#5bb8ff;
+}
+.todelete{
+	background:#D26D63;
+	outline-width:1px;
+	outline-color:#D26D63;
+}
+.add{
+	background:#A87D05;
+	outline-width:1px;
+	outline-color:#A87D05;
+}
+button{
+	width:230px;
+	height:25px;
+	color:white;
+	border-radius:10px;
+	border:none;
+	background:#919496;
+	outline-width:1px;
+	outline-color:#919496;
+}
+</style>
+</head>
+<body>
+<div id="header">
+	<div class="notselect">
+		<a href="#">今天</a>
+	</div>
+	<div class="selected">
+		<a href="#">以往</a>
+	</div>
+	<div class="notselect">
+		<a href="#">管理</a>
+	</div>
+	<div class="notselect">
+		<a href="#">注销</a>
+	</div>
+</div>
+<div class="goals">
+	<form>
+		<div>
+			<button class="detail">详情</button>
+		</div>
+		<hr color=#DBDEDA size=1>
+		<div>
+			<button class="grade">完美</button>
+		</div>
+		<hr color=#DBDEDA size=1>
+		<div>
+			<button class="grade">好样的</button>
+		</div>
+		<hr color=#DBDEDA size=1>
+		<div>
+			<button class="grade">还可以</button>
+		</div>
+		<hr color=#DBDEDA size=1>
+		<div>
+			<button class="grade">再努力一下</button>
+		</div>
+		<hr color=#DBDEDA size=1>
+		<div>
+			<button class="grade">加油！加油！</button>
+		</div>
+	</form>
+</div>
+</body>
+</html>
