@@ -1,0 +1,116 @@
+<html>
+<head>
+<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<style type="text/css">
+body{
+width:320px;
+margin:5% auto 0;
+background:#f7fafc;
+}
+#header{
+	line-height:40px;
+	width:320px;
+	height:40px;
+	background:linear-gradient(to bottom,#fb0,#E6AA03);
+}
+#header a{
+	text-decoration:none;
+	color:white;
+}
+.selected{
+	width:80px;
+	float:left;
+	text-align:center;
+	color:white;
+	background:linear-gradient(to bottom,#C18F06,#735503);
+}
+.notselect{
+	width:80px;
+	float:left;
+	text-align:center;
+	color:white;
+}
+/*----------------------------*/
+.goals{
+background:white;
+padding:10px 5 0 5;
+font-family: "Helvetica";
+display:block;
+}
+.goals div{
+	text-align:center;
+}
+.add{
+	background:#A87D05;
+	outline-width:1px;
+	outline-color:#A87D05;
+}
+.score-left{
+	width:115px;
+	height:25px;
+	color:white;
+	border-radius:10px 0px 0px 10px;
+	border:none;
+	background:#65D263;
+	outline-width:1px;
+	outline-color:#65D263;
+}
+button{
+	width:230px;
+	height:25px;
+	color:white;
+	border-radius:10px;
+	border:none;
+	background:#65D263;
+	outline-width:1px;
+	outline-color:#65D263;
+}
+.score-right{
+	width:115px;
+	height:25px;
+	color:white;
+	border-radius:0px 0px 0px 0px;
+	border:none;
+	background:#5bb8ff;
+	outline-width:1px;
+	outline-color:#5bb8ff;
+}
+</style>
+</head>
+<body>
+<div id="header">
+	<div class="notselect">
+		<a href="#">今天</a>
+	</div>
+	<div class="selected">
+		<a href="#">以往</a>
+	</div>
+	<div class="notselect">
+		<a href="#">管理</a>
+	</div>
+	<div class="notselect">
+		<a href="#">注销</a>
+	</div>
+</div>
+<div class="goals">
+	<form>
+		<div>
+			<button class="score-left">心情</button>
+			<button class="score-right">4分</button>
+		</div>
+		<hr color=#DBDEDA size=1>
+		<div>
+			<button>饮食</button>
+		</div>
+		<hr color=#DBDEDA size=1>
+		<div>
+			<button>运动</button>
+		</div>
+		<hr color=#DBDEDA size=1>
+		<div>
+			<button class="add">+ 文字</button>
+		</div>
+	</form>
+</div>
+</body>
+</html>
